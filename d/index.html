@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title></title>
+        <script>
+var a=location.search.substring(1).split("&");
+var s={};
+if(!(a.length==1&&a[0]=='')){
+    for (let i=0;i<a.length;i++){
+        let as_=a[i].split("=");
+        s[decodeURIComponent(as_[0])]=decodeURIComponent(as_[1]);
+    }
+}
+if(s['d']){
+    location.replace('../下载.html?下载='+s['d']);
+}else{
+    location.replace('../下载.html')
+}
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
